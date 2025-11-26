@@ -1,0 +1,26 @@
+seed: 42
+device_num: 0
+batch_size: 100
+batch_size_test: 256
+
+model_names:
+  #- vgg16
+  #- resnet50
+  - mobilenet_v2
+  #- wide_resnet101
+
+target_class: 109
+num_mlp_training_epochs: 80
+num_attack_epochs: 50
+epsilon: 0.062745  # 16/255
+alpha: 0.007843  # 2/255
+samples_mlp_target: 50
+samples_mlp_others: 1000
+samples_attack_dataset: 1000
+num_max_mlp_training_epochs: 50
+num_max_attack_epochs: 20
+attack_type: "UAP-inf"
+output_dir: "/home/g.rossolini/git/sgd-uap-torch/notebooks/results/exp_16_400"
+data_split_ratios:
+  - 0.9
+  - 0.1
